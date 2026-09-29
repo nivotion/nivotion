@@ -1,19 +1,11 @@
-# Verify the Experimental Preview
+# Verify NIVOTION 0.2.0-rc.1
 
-| Asset | Bytes | MiB |
-| --- | ---: | ---: |
-| `NIVOTION_0.1.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip` | 101,859,858 | 97.14 |
+Asset: `NIVOTION_0.2.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip`
 
-ZIP SHA256:
+Size: 165,912,532 bytes.
 
-```text
-09aef537bde2f7d5451ddbb8d941fd0244b9ccb4a2a57661c662095973cd0193
-```
+ZIP SHA256: `16050fed45d25eea94644592c3beb33f2eabcd8af54e9f49ea861d5a76d1e34d`
 
-Extracted `NIVOTION/NIVOTION.exe` SHA256:
+Extracted NIVOTION/NIVOTION.exe SHA256: `3b5c13990f8f4ee0059372397d98baf858fcdb23defac7b2ebebc5b834082443`
 
-```text
-5930a97aed55dcb8390425e9653a40290bbbb3cafa39b6ece904f59b98e0886d
-```
-
-[SHA256SUMS.txt](SHA256SUMS.txt) supplies the machine-readable ZIP checksum. [Installation](INSTALL.md) shows the PowerShell verification command. A matching checksum proves file identity, not publisher identity or safety.
+See [installation](INSTALL.md) and [machine-readable checksum](SHA256SUMS.txt). A checksum proves identity, not safety. Historical release checksums remain on their original GitHub Release pages.

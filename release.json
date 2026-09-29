@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0-rc.1",
+  "build": "20260929.1",
+  "web_version": "2.0.0",
+  "architecture": "Windows x64",
+  "channel": "Experimental Preview",
+  "tag": "v0.2.0-rc.1",
+  "title": "NIVOTION V2 - 0.2.0-rc.1 Experimental Preview",
+  "asset": "NIVOTION_0.2.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip",
+  "release_url": "https://github.com/nivotion/nivotion/releases/tag/v0.2.0-rc.1",
+  "download_url": "https://github.com/nivotion/nivotion/releases/download/v0.2.0-rc.1/NIVOTION_0.2.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip",
+  "zip_sha256": "16050fed45d25eea94644592c3beb33f2eabcd8af54e9f49ea861d5a76d1e34d",
+  "exe_sha256": "3b5c13990f8f4ee0059372397d98baf858fcdb23defac7b2ebebc5b834082443",
+  "zip_bytes": 165912532
+}

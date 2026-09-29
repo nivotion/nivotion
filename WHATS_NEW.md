@@ -1,6 +1,4 @@
-# Release history
-
-## 0.2.0-rc.1
+# What's new in NIVOTION 0.2.0-rc.1
 
 ## More of your work, in one place.
 
@@ -16,16 +14,3 @@ NIVOTION V2 expands the first CSV preview into a local workspace for CSV, PDF an
 Experimental Preview for Windows x64. OCR needs human review. Session inventory is not saved across restarts. Spreadsheet exports are text tables, not full workbook round-trips. No AI or background automation is included.
 
 [Download](https://github.com/nivotion/nivotion/releases/download/v0.2.0-rc.1/NIVOTION_0.2.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip) · [Quick Start](QUICKSTART.md) · [Known limits](KNOWN_LIMITATIONS.md)
-
-## 0.1.0-rc.1 — First Public Experimental Preview
-
-This is NIVOTION's first public Windows x64 Experimental Preview.
-
-- Single CSV preparation with optional exact duplicate-original-row removal.
-- Combine 2–4 compatible CSVs by vertical append, preserving duplicates.
-- Review-first drafts, explicit new-file CSV export and provenance sidecar.
-- Home, Workflows, session Activity and Settings.
-- English/Czech, Dark/Light and reduced startup motion.
-- Standalone, unsigned Windows package with third-party notices, corresponding library sources and library replacement/relink toolkit.
-
-See [limits](KNOWN_LIMITATIONS.md) and [checksums](CHECKSUMS.md).

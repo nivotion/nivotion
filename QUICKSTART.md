@@ -1,34 +1,12 @@
-# Prepare a CSV draft
+# Quick Start · 0.2.0-rc.1
 
-Start NIVOTION and choose a workflow from Home or Workflows. Inputs must be comma-separated UTF-8 CSV (a UTF-8 BOM is accepted), with a header row. Keep a backup and review the result before using it elsewhere.
+1. Download [NIVOTION_0.2.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip](https://github.com/nivotion/nivotion/releases/download/v0.2.0-rc.1/NIVOTION_0.2.0-rc.1_WINDOWS_X64_EXPERIMENTAL_PREVIEW.zip), verify the published SHA256, and extract the **entire** ZIP. Keep all runtime and library-rights folders together. Run `NIVOTION/NIVOTION.exe` on Windows x64.
+2. The executable is unsigned and Windows may warn. Check the official release and checksum before deciding whether to run it; do not disable Windows protections globally.
+3. Add CSV, PDF or XLSX files. Additional drops append to the session inventory. Select the workflow and review the source before preparing it.
+4. **CSV:** review one file and choose supported cleanup options. For Combine, select compatible CSVs with identical, unique headers in the same order. Confirm their displayed order.
+5. **PDF:** inspect native text or table candidates. For scanned pages, explicitly enable OCR and select Czech, English or both. Check text and table accuracy; OCR is fallible.
+6. **XLSX:** inspect the workbook, select a worksheet and review warnings. Choose cleanup options, then Prepare. Formulas are not calculated; cached values can be stale.
+7. **Prepare:** review the resulting draft. Switching away from an unsaved draft requires an explicit discard decision.
+8. **Export:** choose a new destination. Keep the exported file and its `.provenance.json` sidecar together. The sidecar records sources, selections and processing details; it is not a certification.
 
-## Single CSV
-
-1. Choose **Prepare a CSV** → **Select CSV…** and select one file.
-2. Review the source preview and row/column counts.
-3. Optionally select **Remove exact duplicate original rows**. This compares original rows, before whitespace trimming; rows that only become equal after trimming are not removed by that rule.
-4. Choose **Prepare Draft**. Outer cell whitespace is trimmed; headers are preserved.
-5. Review **Prepared preview**, counts and status. **DRAFT_PREPARED** means a draft exists in this session; it has not yet been exported.
-6. Choose **Export Draft…**, select a new filename, review the confirmation and both destinations, then confirm **Export draft**.
-
-## Combine 2–4 CSVs
-
-1. Choose **Combine CSVs** → **Select CSV files…**.
-2. Select 2–4 distinct files. Their non-empty, unique column headers must match exactly and in the same order.
-3. Review validation and the displayed file order. That order is the vertical append order; there is no key-based merge. Reselect files if the order is wrong.
-4. Choose **Prepare Draft**, then inspect the prepared preview and total counts.
-5. Choose **Export Draft…**, select a new destination and confirm.
-
-Combine preserves rows, text values, whitespace and duplicates. It performs no automatic deduplication.
-
-## What export creates
-
-For a destination named `draft.csv`, the app writes `draft.csv` and `draft.csv.provenance.json`. Provenance records source identity/digest/revision information, preparation choices and output information so the draft can be traced to its inputs. Keep the pair together. Review the JSON before sharing it.
-
-**DRAFT_PREPARED is not ACTION_SUCCESS.** It does not mean a downstream business action occurred. A successful explicit local export is reported as `DRAFT_EXPORTED`; no downstream action is implied.
-
-Existing destinations, including an existing provenance sidecar, are rejected. Choose two new filenames; source files cannot be overwritten. If the source changes, select and prepare it again. If export is reported as unverified/recovery required, inspect the indicated locations: partial CSV, sidecar or staging files may exist. Do not treat an unverified result as successful.
-
-The table is a preview of the first 20 rows and 256 characters per cell/header, not the entire dataset. Exports retain full accepted text. Formula-like values are not sanitized: take care before opening a CSV in a spreadsheet program.
-
-[Full limits](KNOWN_LIMITATIONS.md) · [Report a problem](SUPPORT.md)
+The mixed inventory is process-local and is not restored after restarting. Resource limits apply; one expensive operation runs at a time. Only one selected PDF or worksheet produces a document result. No cloud upload, AI workflow, general conversion or cross-format merge is included. See [known limits](KNOWN_LIMITATIONS.md).

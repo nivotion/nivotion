@@ -1,26 +1,12 @@
-# Experimental Preview limitations
+# Known limits
 
-Version 0.1.0-rc.1 is experimental, not a stable/final release. Only the two documented CSV workflows are available. Review results before relying on them.
-
-| Boundary | Current limit |
-| --- | --- |
-| Input size | 10,000,000 bytes per file (decimal 10 MB) |
-| Combined input | 2–4 files; 25,000,000 bytes total (decimal 25 MB) |
-| Rows | 100,000 data rows per file and 100,000 total when combining |
-| Columns | 128 per file |
-| Data cells | 2,000,000 per file; 4,000,000 combined |
-| Field | 32,768 UTF-8 bytes |
-| Output | 32,000,000 bytes (decimal 32 MB); larger results are rejected |
-| Display preview | First 20 rows; first 256 characters per cell/header |
-
-Limits apply together. The output ceiling is not a promise that every 32 MB result can be produced within the input limits. Parsing/export also have bounded processing time and may stop on slow or unsuitable storage.
-
-- Comma-separated UTF-8 / UTF-8-SIG CSV only; malformed records or incompatible headers are rejected. Semicolon-separated and other encodings are not supported by these workflows.
-- Combine appends vertically with identical unique headers in the same order. It preserves duplicates and whitespace; it does not merge by a key.
-- Single CSV trims outer cell whitespace and optionally removes exact duplicate original rows.
-- Activity and prepared drafts are session-local. Restarting clears the session view; exported files remain on disk.
-- Export is explicit and refuses existing CSV or provenance destinations. Incomplete/unverified export requires inspection before retrying.
-- Formula-like CSV cells are not sanitized. Spreadsheet programs can interpret such values as formulas.
-- The Windows x64 binary is unsigned; SmartScreen may warn. There is no installer in this distribution.
-
-[Installation](INSTALL.md) · [Quickstart](QUICKSTART.md)
+- Experimental, unsigned Windows x64 desktop build. Validation on the release machine is not certification for every Windows configuration.
+- Session inventory exists only while the application runs. One parsed workflow remains active; switching from an unsaved draft requires discard.
+- Bounded input, preview, memory and execution budgets; one expensive job at a time. The inherited process limit is 64 workflow owners.
+- CSV Combine requires compatible headers and preserves duplicates. It is a vertical append, not a relational join or cross-format merge.
+- PDF reading order is geometric. Table detection offers candidates, not guaranteed reconstruction. Unsupported encrypted/active document features are rejected.
+- OCR is explicit, local and fallible; rotation is manual. Only Czech/English language data is included. Review output before use.
+- One selected PDF or worksheet per document result. XLSX formulas/macros are never executed. Cached formula values can be stale; hidden sheets and merged cells require explicit choices.
+- Spreadsheet output is a text table. Original worksheet names and source values are preserved during review; original workbook formatting, charts and formulas are not round-tripped.
+- Export requires a new destination. Provenance provides a processing record, not downstream success or certification.
+- Resource supervision is not an operating-system security sandbox. No AI, IPC/background agent, general Split/Convert, cloud automation or financial finalization is included.

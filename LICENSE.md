@@ -1,11 +1,11 @@
 # NIVOTION Experimental Preview License
-## NIVOTION 0.1.0-rc.1
+## NIVOTION 0.2.0-rc.1
 
 Copyright © 2026 Štěpán Buchta
 
 ## 1. Scope
 
-These terms apply only to the NIVOTION 0.1.0-rc.1 Experimental Preview application (“NIVOTION Experimental Preview”).
+These terms apply only to the NIVOTION 0.2.0-rc.1 Experimental Preview application (“NIVOTION Experimental Preview”).
 
 Copyright and other rights in NIVOTION’s proprietary application code remain with the copyright holder. These terms do not publish or license NIVOTION’s proprietary application source code as open source.
 

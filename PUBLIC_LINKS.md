@@ -6,7 +6,7 @@ These are NIVOTION's designated GitHub destinations. A destination is available 
 | Destination | Direct URL |
 | --- | --- |
 | Product repository | [Product repository](https://github.com/nivotion/nivotion) |
-| Downloads | [Downloads](https://github.com/nivotion/nivotion/releases/tag/v0.1.0-rc.1) |
+| Downloads | [Downloads](https://github.com/nivotion/nivotion/releases/tag/v0.2.0-rc.1) |
 | Feedback repository | [Feedback repository](https://github.com/nivotion/nivotion-feedback) |
 | Bug report | [Bug report](https://github.com/nivotion/nivotion-feedback/issues/new?template=bug_report.yml) |
 | UX feedback | [UX feedback](https://github.com/nivotion/nivotion-feedback/issues/new?template=ux_feedback.yml) |
@@ -18,7 +18,7 @@ These are NIVOTION's designated GitHub destinations. A destination is available 
 
 ## Download
 
-Use **nivotion → Releases → v0.1.0-rc.1**. Download the named Windows ZIP, not a generated repository source archive. If the release is absent, a download is not yet available.
+Use **nivotion → Releases → v0.2.0-rc.1**. Download the named Windows ZIP, not a generated repository source archive. If the release is absent, a download is not yet available.
 
 ## Bug reports
 
